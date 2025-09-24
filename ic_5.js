@@ -9,6 +9,9 @@ const products = [
   { id: 205, name: "Switchable Keycaps",  category: "gear",    price: 19.0  }
 ];
 
+console.log(products)
+
+
 // Example cart (product & quantity)
 const cart = [
   { productId: 202, qty: 1 },
@@ -17,6 +20,49 @@ const cart = [
   { productId: 205, qty: 1 }
 ];
 
+console.log(cart)
+
 // Try: "regular", "student", "member", or "vip"
 const customerType = "member";
 
+/*/ Task one
+ function getCategoryDiscount(category){
+  switch(productsCategory){
+    case (products.category == "gear"):
+      console.log(0.1)
+      break
+    case 
+    default:
+    console.log(1234)
+  }
+
+ }
+*/
+
+ function getCategoryDiscount(category){
+switch(category){
+    case "gear":
+        discount = 0.10
+    break
+    case "apparel":
+        discount = 0.15
+        break
+    case "snacks":
+        discount = 0.08
+        break
+    case "access":
+        discount = 0.5
+        break
+    default:
+        discount = 0;
+}
+let promoPrice = product.price - (product.price * discount);
+product.promoPrice = promoPrice.toFixed(2);
+
+}
+// Task 2
+
+function priceAfterCategoryDiscount(product){
+  rate = getCategoryDiscount(product.category)
+  return product.price * (1- rate)
+}
