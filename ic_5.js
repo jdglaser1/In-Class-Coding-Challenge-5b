@@ -39,30 +39,41 @@ const customerType = "member";
  }
 */
 
- function getCategoryDiscount(category){
-switch(category){
+function getCategoryDiscount(category){
+switch(products.category){
     case "gear":
-        discount = 0.10
-    break
+        return 0.10
+        break
     case "apparel":
-        discount = 0.15
+        return 0.15
         break
     case "snacks":
-        discount = 0.08
+        return 0.08
         break
     case "access":
-        discount = 0.5
+        return 0.5
         break
     default:
-        discount = 0;
-}
-let promoPrice = product.price - (product.price * discount);
-product.promoPrice = promoPrice.toFixed(2);
+        return 0;
+}}
+getCategoryDiscount()
 
-}
+
 // Task 2
 
 function priceAfterCategoryDiscount(product){
   rate = getCategoryDiscount(product.category)
   return product.price * (1- rate)
+}
+
+//Task 3
+
+function findProductById(id){
+ for (let product of products)
+  if (product.id === id){
+    return product
+  }
+  else {
+    return null
+}
 }
