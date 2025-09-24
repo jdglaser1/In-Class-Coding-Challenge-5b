@@ -25,19 +25,6 @@ console.log(cart)
 // Try: "regular", "student", "member", or "vip"
 const customerType = "member";
 
-/*/ Task one
- function getCategoryDiscount(category){
-  switch(productsCategory){
-    case (products.category == "gear"):
-      console.log(0.1)
-      break
-    case 
-    default:
-    console.log(1234)
-  }
-
- }
-*/
 
 function getCategoryDiscount(category){
 switch(products.category){
@@ -75,5 +62,5 @@ function findProductById(id){
   }
   else {
     return null
-}
+      }
 }
